@@ -3,8 +3,8 @@ import { useState, useEffect} from "react";
 import Image from "next/image";
 const QueenOfHearts = ({handleJangTrio}) => {
     //const correctSequence = [1, 4, 7, 10, 12, 15, 19, 20];
-    //const correctSequence = [2, 7, 14, 5, 16, 8, 9, 13, 3, 20, 17, 1, 15, 12, 4, 18, 10, 21, 6, 11, 19, 22];
-    const correctSequence = [1];
+    const correctSequence = [2, 7, 14, 5, 16, 8, 9, 13, 3, 20, 17, 1, 15, 12, 4, 18, 10, 21, 6, 11, 19, 22];
+    //const correctSequence = [1];
     const totalHearts = 22;
 
     const [currentStep, setCurrentStep] = useState(0);

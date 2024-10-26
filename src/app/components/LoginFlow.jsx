@@ -14,7 +14,7 @@ const LoginFlow = ({toggleMatrix}) => {
         setStep(newStep);
     }
     const handlePasswordSubmit = () => {
-        const correctPassword = ['kzeebday', 'kzee', 'bday'];
+        const correctPassword = ['byeolsa', 'hateu', 'Yeonghon'];
 
         if (password === correctPassword[unlocks]) {
             setUnlocks((prev) => prev + 1);
