@@ -79,6 +79,7 @@ const JangTrio = ({handleSeaWorld}) => {
                         type="text"
                         value={cards.inputs[0]}
                         onChange={(e) => handleInputChange(e, 0)}
+                        onClick={(e) => e.stopPropagation()}
                         placeholder="Enter word"
                         className="mt-4 p-2 border border-gray-300 rounded"
                       />
@@ -110,6 +111,7 @@ const JangTrio = ({handleSeaWorld}) => {
                       type="text"
                       value={cards.inputs[1]}
                       onChange={(e) => handleInputChange(e, 1)}
+                      onClick={(e) => e.stopPropagation()}
                       placeholder="Enter word"
                       className="mt-4 p-2 border border-gray-300 rounded"
                     />
@@ -141,6 +143,7 @@ const JangTrio = ({handleSeaWorld}) => {
                         type="text"
                         value={cards.inputs[2]}
                         onChange={(e) => handleInputChange(e, 2)}
+                        onClick={(e) => e.stopPropagation()}
                         placeholder="Enter word"
                         className="mt-4 p-2 border border-gray-300 rounded"
                       />
