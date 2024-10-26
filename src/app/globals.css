@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+#hearts-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 1000;
+}
+
+.falling-heart {
+  position: absolute;
+  top: 0;
+  width: 30px;
+  height: 30px;
+  background-image: url('/images/Heart.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  animation: fall linear infinite;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(100vh);
+    opacity: 0;
+  } 
+}
+
+.font-dancing-script {
+  font-family: "Dancing Script", cursive;
+}
+
+@keyframes heart-drop {
+  0% { opacity: 1; transform: translateY(0);}
+  100% { opacity: 0; transform: translateY(100vh);}
+}
+
+@keyframes heart-fall {
+  0% { transform: translateY(0);}
+  100% { transform: translateY(100vh);}
+}
+
+.animate-heart-drop {
+  animation: heart-drop 2s ease forwards;
+}
+
+.animate-heart-fall {
+  animation: heart-fall 2s ease forwards;
+}
+
+.rotate-y-180 {
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
+}

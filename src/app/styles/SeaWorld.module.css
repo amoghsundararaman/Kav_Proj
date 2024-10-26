@@ -1,0 +1,103 @@
+.background {
+    background-image: url('/images/ABC World.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100vh;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.scrollContainer {
+    position: relative;
+    text-align: center;
+    animation: fadeIn 5s ease-in-out;
+}
+
+.scrollImage {
+    max-width: 100%;
+    height: auto;
+}
+
+.scrollText {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #333;
+    font-family: 'Cursive', sans-serif;
+    font-size: 24px;
+    width: 80%;
+}
+
+.button {
+    margin-top: 20px;
+    background-color: #ff6b6b;
+    border: none;
+    color: white;
+    padding: 12px 24px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 50px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.button:hover {
+    background-color: #ff4040;
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+}
+
+.bubble {
+    position: absolute;
+    bottom:0;
+    animation: floatUp 5s ease-in-out infinite;
+    opacity:0.8;
+}
+
+.bubble-float {
+    animation: floatUp 3s linear infinite;
+    position:absolute;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.fadeOut {
+    animation: fadeOut 5s ease-in-out forwards;
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(100vh);
+        opacity: 0.8;
+    }
+    50% {
+        opacity:1;
+    }
+    100% {
+        transform: translateY(-100vh);
+        opacity: 1;
+    }
+}
